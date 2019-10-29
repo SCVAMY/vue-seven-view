@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    helloWorld
+    <s-button @click="buttonClick">hello</s-button>
   </div>
 </template>
 
@@ -8,6 +8,11 @@
 import Vue from 'vue';
 export default Vue.extend({
   name: 'App',
+  methods: {
+    buttonClick(e) {
+      console.log(e);
+    }
+  }
 });
 </script>
 
@@ -18,5 +23,4 @@ export default Vue.extend({
   width: 100%;
   height: 100%;
 }
-
 </style>

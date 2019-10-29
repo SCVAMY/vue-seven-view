@@ -1,0 +1,20 @@
+@charset "UTF-8";
+@import '../../../style/common/var.scss';
+@import '../../../style/mixins/mixins.scss';
+
+@include b(button) {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: $--button-default-background-color;
+  border: $--border-base;
+  border-color: $--button-default-border-color;
+  color: $--button-default-font-color;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  transition: 0.1s;
+  font-weight: $--button-font-weight;
+}
