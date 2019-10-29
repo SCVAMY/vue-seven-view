@@ -9,7 +9,6 @@ yarn-error.log*
 /config/
 /demo/
 /docs/
-/static/libs/Cesium/
 /static/index.js
 .git
 .editorconfig
