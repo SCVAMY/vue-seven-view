@@ -32,9 +32,9 @@ const webpackConfig = merge(baseWebpackConfig, {
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: isMinify ? `${outputFileName}.min.js` : `${outputFileName}.js`,
-    // libraryTarget: 'umd',
-    // libraryExport: 'default',
-    // library: ['test', 'Components']
+    libraryTarget: 'umd',
+    libraryExport: 'default',
+    library: 'seven-view'
   },
   externals: [
     {
