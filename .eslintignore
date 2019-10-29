@@ -1,0 +1,7 @@
+/build/
+/config/
+/dist/
+/test/unit/coverage/
+/demo
+/static/libs/json-sql/
+*.spec.js
