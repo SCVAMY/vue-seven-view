@@ -1,5 +1,5 @@
-import SButton from './Button.vue';
+// import SButton from './Button.vue';
 
-SButton.install = function(Vue){
-  Vue.component(SButton.name, SButton);
-}
+// SButton.install = function(Vue){
+//   Vue.component(SButton.name, SButton);
+// }

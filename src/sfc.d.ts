@@ -11,6 +11,15 @@ declare module '*.vue' {
 
   export default Vue;
 }
+
+// declare module 'vue/types/vue' {
+//   // 可以使用 `VueConstructor` 接口
+//   // 来声明全局属性
+//   interface VueConstructor {
+//     install: any;
+//   }
+// }
+
 /**
  * 告诉 TypeScript window是个全局对象，直接可用，这样就不会在window.xx = 123时报错
  */
@@ -18,7 +27,7 @@ interface Window {
   Vue: any;
 }
 
-declare var window: Window;
+declare var window: Window & typeof globalThis;
 // declare var require: any;
 
 // typings.d.ts

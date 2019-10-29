@@ -1,12 +1,12 @@
-import Vue from 'vue';
+// import Vue from 'vue';
 
-declare module 'vue/types/vue' {
-  // 可以使用 `VueConstructor` 接口
-  // 来声明全局属性
-  interface VueConstructor {
-    install: any;
-  }
-}
+// declare module 'vue/types/vue' {
+//   // 可以使用 `VueConstructor` 接口
+//   // 来声明全局属性
+//   interface VueConstructor {
+//     install: any;
+//   }
+// }
 
 // /**
 //  * 告诉 TypeScript *.vue 后缀的文件可以交给 vue 模块来处理
