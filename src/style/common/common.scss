@@ -1,0 +1,19 @@
+@import "./var.scss";
+body {
+  font-family: Microsoft YaHei, sans-serif !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.clearfix:after {
+  content: " ";
+  height: 0;
+  display: block;
+  clear: both;
+}
+
+.disabled {
+  pointer-events: none;
+}
