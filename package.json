@@ -8,7 +8,8 @@
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
     "lint:fix": "eslint --fix --ext .js,.vue src",
-    "build": "node build/build.js && node build/build.js -p"
+    "build": "node build/build.js && node build/build.js -p",
+    "build_component": "node build/build.js component"
   },
   "dependencies": {
     "vue-property-decorator": "^8.3.0"

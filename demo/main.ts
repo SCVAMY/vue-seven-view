@@ -1,7 +1,7 @@
 /* eslint-disable */
 import Vue from 'vue';
 import App from './App.vue';
-import SComponents from '../dist/seven-view';
+import SComponents from '../src/index';
 
 Vue.config.productionTip = false;
 

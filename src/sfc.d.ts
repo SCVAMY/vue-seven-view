@@ -27,9 +27,6 @@ interface Window {
   Vue: any;
 }
 
-declare var window: Window & typeof globalThis;
-// declare var require: any;
-
 // typings.d.ts
 declare module '*.json' {
   const value: any;
