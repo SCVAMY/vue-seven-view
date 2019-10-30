@@ -9,7 +9,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 // const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
@@ -20,7 +19,11 @@ const pkg = require('../package.json');
 
 // 整理入口
 const components = require('../components.json')
-
+let entrys = {};
+Object.keys(components).forEach(item => {
+  entrys[item] = components[item]
+  entrys[item].push(`${components[item]}/style/${item}.scss`)
+})
 const webpackConfig = merge(baseWebpackConfig, {
   mode: 'production',
   module: {
@@ -30,7 +33,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     })
   },
   // devtool: config.build.productionSourceMap ? config.build.devtool : false,
-  entry: components,
+  entry: entrys,
   output: {
     path: path.resolve(__dirname, '../dist/components'),
     filename: isMinify ? `[name].min.js` : `[name].js`,
@@ -67,9 +70,6 @@ const webpackConfig = merge(baseWebpackConfig, {
     license: ${pkg.license}
     version: v${pkg.version}
    `),
-   new ExtractTextPlugin({
-    filename: '/theme/[name].css'
-   })
   ]
 });
 
