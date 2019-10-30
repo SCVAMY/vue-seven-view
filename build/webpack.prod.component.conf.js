@@ -35,7 +35,7 @@ const webpackConfig = merge(baseWebpackConfig, {
   // devtool: config.build.productionSourceMap ? config.build.devtool : false,
   entry: entrys,
   output: {
-    path: path.resolve(__dirname, '../dist/components'),
+    path: path.resolve(__dirname, '../lib'),
     filename: isMinify ? `[name].min.js` : `[name].js`,
     libraryTarget: 'umd',
     libraryExport: 'default',
