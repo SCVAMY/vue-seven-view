@@ -1,8 +1,9 @@
-import SButton from './Button.vue';
+import Button from './Button.vue';
 
+console.log(Button);
 // @ts-ignore
-SButton.install = function(Vue){
-  Vue.component(SButton.name, SButton);
+Button.install = function(Vue){
+  Vue.component(Button.name, Button);
 }
 
-export default SButton;
+export default Button;

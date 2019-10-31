@@ -19,7 +19,7 @@ import { Component, Prop } from 'vue-property-decorator';
 @Component({
   name: 'SButton'
 })
-class SButton extends Vue {
+class Button extends Vue {
   @Prop() disabled: boolean;
   @Prop() loading: boolean;
   @Prop() icon: string;
@@ -28,5 +28,5 @@ class SButton extends Vue {
   @Prop() circle: boolean;
   @Prop() type: string;
 }
-export default SButton;
+export default Button;
 </script>
