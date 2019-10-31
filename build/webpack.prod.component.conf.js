@@ -18,12 +18,15 @@ const isMinify = process.argv.includes('-p');
 const pkg = require('../package.json');
 
 // 整理入口
-const components = require('../components.json')
-let entrys = {};
-Object.keys(components).forEach(item => {
-  entrys[item] = components[item]
-  entrys[item].push(`${components[item]}/style/${item}.scss`)
-})
+const components = require('../components.json');
+
+// let entrys = {};
+// Object.keys(components).forEach(item => {
+//   entrys[item] = components[item];
+//   entrys[item].push(`${components[item]}/style/${item}.scss`);
+//   // entrys[item][0] = `${entrys[item][0]}/index.ts`
+// });
+
 const webpackConfig = merge(baseWebpackConfig, {
   mode: 'production',
   module: {
@@ -33,13 +36,14 @@ const webpackConfig = merge(baseWebpackConfig, {
     })
   },
   // devtool: config.build.productionSourceMap ? config.build.devtool : false,
-  entry: entrys,
+  entry: components,
   output: {
     path: path.resolve(__dirname, '../lib'),
     filename: isMinify ? `[name].min.js` : `[name].js`,
-    libraryTarget: 'umd',
-    libraryExport: 'default',
-    library: 'seven-view'
+    libraryTarget: 'umd'
+    // libraryExport: 'default',
+    // library: 'seven-view'
+    // libraryTarget: 'commonjs2'
   },
   externals: [
     {
@@ -69,7 +73,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     ${pkg.name}.(${pkg.homepage})
     license: ${pkg.license}
     version: v${pkg.version}
-   `),
+   `)
   ]
 });
 
