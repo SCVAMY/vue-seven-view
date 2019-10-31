@@ -1,6 +1,6 @@
 {
   "name": "seven-view",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "test",
   "main": "dist/seven-view",
   "scripts": {
@@ -20,9 +20,6 @@
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.3.1",
     "@babel/runtime": "^7.3.1",
-    "@turf/bbox-polygon": "^5.0.4",
-    "@turf/buffer": "^5.0.4",
-    "@turf/union": "^5.0.4",
     "@types/webpack-env": "^1.13.9",
     "@vue/eslint-config-standard": "^4.0.0",
     "@vue/server-test-utils": "1.0.0-beta.29",
