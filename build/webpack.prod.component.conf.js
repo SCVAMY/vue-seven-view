@@ -20,30 +20,18 @@ const pkg = require('../package.json');
 // 整理入口
 const components = require('../components.json');
 
-// let entrys = {};
-// Object.keys(components).forEach(item => {
-//   entrys[item] = components[item];
-//   entrys[item].push(`${components[item]}/style/${item}.scss`);
-//   // entrys[item][0] = `${entrys[item][0]}/index.ts`
-// });
-
 const webpackConfig = merge(baseWebpackConfig, {
   mode: 'production',
   module: {
     rules: utils.styleLoaders({
-      // sourceMap: config.build.productionSourceMap,
       extract: true
     })
   },
-  // devtool: config.build.productionSourceMap ? config.build.devtool : false,
   entry: components,
   output: {
     path: path.resolve(__dirname, '../lib'),
     filename: isMinify ? `[name].min.js` : `[name].js`,
     libraryTarget: 'umd'
-    // libraryExport: 'default',
-    // library: 'seven-view'
-    // libraryTarget: 'commonjs2'
   },
   externals: [
     {
